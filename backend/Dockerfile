@@ -14,5 +14,5 @@ WORKDIR /app
 COPY --from=build /app/target/tracify-backend-1.0.0.jar app.jar
 # Expose the port
 EXPOSE 8080
-# Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run the application with memory limits suitable for Render Free Tier (512MB)
+ENTRYPOINT ["java", "-Xmx384m", "-Xms384m", "-jar", "app.jar"]

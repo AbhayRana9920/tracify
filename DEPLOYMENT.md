@@ -32,7 +32,8 @@ This setup relies on **free tiers** and implements best practices to handle ephe
    - **Start Command**: (Leave empty, Render will use the Dockerfile)
 4. Add Environment Variables:
    - `PORT` = `10000`
-   - `DB_URL` = `jdbc:mysql://<Aiven_Host>:<Aiven_Port>/defaultdb?createDatabaseIfNotExist=true&useSSL=true&serverTimezone=UTC`
+   - `DB_URL` = `jdbc:mysql://<Aiven_Host>:<Aiven_Port>/defaultdb?createDatabaseIfNotExist=true&useSSL=true&serverTimezone=UTC&allowPublicKeyRetrieval=true`
+   - **Important**: Aiven's default database name is `defaultdb`. Ensure your URL ends with `/defaultdb` (unless you created a custom one).
    - `DB_USERNAME` = `<Aiven_User>`
    - `DB_PASSWORD` = `<Aiven_Password>`
    - `JWT_SECRET` = `YourSecureRandom256BitKeyForJWTAuthHere`

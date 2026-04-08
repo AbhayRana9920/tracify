@@ -26,9 +26,10 @@ This setup relies on **free tiers** and implements best practices to handle ephe
 2. Connect your GitHub repository.
 3. Configure the service:
    - **Root Directory**: `backend`
-   - **Environment**: \`Java\` (or Docker if configured)
-   - **Build Command**: `mvn clean package -DskipTests`
-   - **Start Command**: `java -jar target/tracify-backend-1.0.0.jar`
+   - **Root Directory**: `backend`
+   - **Environment**: `Docker`
+   - **Build Command**: (Leave empty, Render will use the Dockerfile)
+   - **Start Command**: (Leave empty, Render will use the Dockerfile)
 4. Add Environment Variables:
    - `PORT` = `10000`
    - `DB_URL` = `jdbc:mysql://<Aiven_Host>:<Aiven_Port>/defaultdb?createDatabaseIfNotExist=true&useSSL=true&serverTimezone=UTC`
